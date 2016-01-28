@@ -1,0 +1,4 @@
+one:
+  name: Light 1
+  on_code: 1234
+  off_code: 4321

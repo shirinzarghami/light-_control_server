@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Lights</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lights.each do |light| %>
+      <tr>
+        <td><%= light.name %></td>
+        <td><%= link_to 'Show', [@location, light] %></td>
+        <td><%= link_to 'Edit', edit_location_light_path(@location, light) %></td>
+        <td><%= link_to 'Destroy', [@location, light], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Light', new_location_light_path(@location) %>
